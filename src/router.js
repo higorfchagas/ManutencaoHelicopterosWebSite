@@ -27,10 +27,6 @@ export default new Router({
         footer: AppFooter
       }
     },
-    {
-      caminho: '/ *',
-      componente: 404
-      },
   ],
   scrollBehavior: to => {
     if (to.hash) {
