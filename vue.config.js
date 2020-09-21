@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
   configureWebpack: {
-    // Set up all the aliases we use in our app.
+    // Set up all the aliases we use in our app. aaaa
     plugins: [
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 6
