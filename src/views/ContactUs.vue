@@ -86,11 +86,7 @@ export default {
   },
   methods: {
     sendEmail: (email) => {
-      var self = this;
-      
-      console.log(process.env.DB_SERVICE,
-          process.env.DB_TEMPLATE, process.env.DB_USER,)
-      
+      var self = this; 
       emailjs
         .send(
           process.env.VUE_APP_SERVICE,
