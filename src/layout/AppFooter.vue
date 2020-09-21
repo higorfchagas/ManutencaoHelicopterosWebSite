@@ -3,10 +3,20 @@
     <div class="container">
       <div class="row row-grid align-items-center my-md">
         <div class="col-lg-6">
-          <img
-            width="100%"
-            src="https://res.cloudinary.com/mco/image/upload/v1600384392/WebAviacaoAMS/helicoptero_szhrct.jpg"
-          />
+          <div>
+            <img
+              width="100%"
+              src="https://res.cloudinary.com/mco/image/upload/v1600384392/WebAviacaoAMS/helicoptero_szhrct.jpg"
+            />
+          </div>
+          <br/>
+          <br/>
+          <div>
+            <img
+              width="100%"
+              src="https://res.cloudinary.com/mco/image/upload/v1600384392/WebAviacaoAMS/helicoptero_szhrct.jpg"
+            />
+          </div>
         </div>
         <div class="col-lg-6">
           <h4
@@ -15,12 +25,12 @@
           <h4
             class="mb-0 font-weight-light"
           >AVIATION MANPOWER SOLUTIONS OFFERS HIGHLY EXPERIENCED AVIATION PROFESSIONALS TO SUPPORT YOUR OPERATIONS. WE PROVIDE, B1 AND B2 ENGINEERS, SHEET METAL EXPERST FOR ALL MODELS OF AIRCRAFTS. OUR PARTICULAR EXPERTISTE ARE HELICOPTERS MODELS:</h4>
-          <br/>
+          <br />
           <h5 class="mb-0 font-weight-light text-danger">AW139</h5>
           <h5 class="mb-0 font-weight-light text-danger">S92</h5>
           <h5 class="mb-0 font-weight-light text-danger">S76</h5>
           <h5 class="mb-0 font-weight-light text-danger">EC 225</h5>
-          <br/>
+          <br />
           <h4 class="mb-0 font-weight-light">
             ALL OF OUR FIELD SERVICE ENGINEERS ARE TRAINED, AND DRIVEN TO ASSIST YOUR AIRCRAFT, PROVIDE SUPPORT ENGINEER TO THE CLIENT ASSISTING THE LOCAL TEAM IN MAINTENANCE TASKS, PLANNING OF
             MAINTENANCE, ADVISING ON TROUBLESHOOTING PROBLEMS, SERVICES TO SUPPORT A MAJOR REPAIR AND TRAINING YOUR STAFF.
@@ -41,14 +51,6 @@
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
               <router-link to="/contactus" class="dropdown-item">Contact us</router-link>
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://www.linkedin.com/login/pt?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
-                class="nav-link"
-                target="_blank"
-                rel="noopener"
-              >LinkedIn</a>
             </li>
           </ul>
         </div>

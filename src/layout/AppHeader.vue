@@ -19,7 +19,7 @@
                 <base-dropdown tag="li" class="nav-item">
                     <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-collection d-lg-none"></i>
-                        <span class="nav-link-inner--text">NAVIGATION</span>
+                        <span class="nav-link-inner--text">Navigation</span>
                     </a>
                     <router-link to="/contactus" class="dropdown-item">Contact us</router-link>
                 </base-dropdown>
@@ -27,9 +27,9 @@
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="https://www.linkedin.com/login/pt?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" target="_blank" rel="noopener"
-                       data-toggle="tooltip" title="Like us on LinkedIN">
+                       data-toggle="tooltip" title="Stars us on LinkedIn">
                         <i class="fa fa-linkedin-square"></i>
-                        <span class="nav-link-inner--text d-lg-none">LinkedIN</span>
+                        <span class="nav-link-inner--text d-lg-none">LinkedIn</span>
                     </a>
                 </li>
                 <!--<li class="nav-item">
