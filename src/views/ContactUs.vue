@@ -54,12 +54,23 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Message:</label>
-                      <textarea class="form-control" style="overflow:auto;resize:none" rows="7" cols="20" v-model="Email.user_message"></textarea>
+                      <textarea
+                        class="form-control"
+                        style="overflow:auto;resize:none"
+                        rows="7"
+                        cols="20"
+                        v-model="Email.user_message"
+                      ></textarea>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <input class="btn btn-primary" type="submit" value="Send" />
+                  <input
+                    class="btn btn-primary"
+                    type="submit"
+                    :disabled="!Email.user_email || !Email.user_message || !Email.user_name"
+                    value="Send"
+                  />
                 </div>
               </form>
             </template>
@@ -71,6 +82,7 @@
 </template>
 <script>
 import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 export default {
   name: "ContactUs",
@@ -85,8 +97,8 @@ export default {
     };
   },
   methods: {
-    sendEmail: (email) => {
-      var self = this; 
+    sendEmail(email){
+      var self = this;
       emailjs
         .send(
           process.env.VUE_APP_SERVICE,
@@ -97,16 +109,33 @@ export default {
             message: email.user_message,
             reply_to: "teste",
           },
-          process.env.VUE_APP_USER,
+          process.env.VUE_APP_USER
         )
         .then(
-          (result) => {
-            alert("Your mail is sent!");
+           (result) => {
+             self.clearForm();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your email is sent.",
+              showConfirmButton: false,
+              timer: 1500,
+            });
           },
           (error) => {
-            alert("Error");
+            Swal.fire({
+              position: "top-end",
+              icon: "error",
+              title: "Error.",
+              showConfirmButton: false,
+              timer: 1500,
+            });
           }
         );
+    },
+    clearForm() {
+      var self = this;
+      self.Email = { user_name: "", user_email: "", user_message: "" };
     },
   },
 };

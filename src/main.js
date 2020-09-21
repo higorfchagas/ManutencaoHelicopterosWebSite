@@ -5,7 +5,6 @@ import router from "./router";
 import Argon from "./plugins/argon-kit";
 import './registerServiceWorker'
 import dotenv from 'dotenv'
-
 dotenv.config()
 
 Vue.config.productionTip = false;
