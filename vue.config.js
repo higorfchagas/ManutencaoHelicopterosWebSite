@@ -4,8 +4,10 @@ module.exports = {
   configureWebpack: {
     // Set up all the aliases we use in our app. aaaa
     plugins: [
-      new webpack.optimize.LimitChunkCountPlugin({
-        maxChunks: 6
+      new webpack.DefinePlugin({
+        "process.env.VUE_APP_SERVICE": JSON.stringify(process.env.VUE_APP_SERVICE),
+        "process.env.VUE_APP_TEMPLATE": JSON.stringify(process.env.VUE_APP_TEMPLATE),
+        "process.env.VUE_APP_USER": JSON.stringify(process.env.VUE_APP_USER),
       })
     ]
   },
