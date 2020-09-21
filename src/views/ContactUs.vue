@@ -101,15 +101,15 @@ export default {
       var self = this;
       emailjs
         .send(
-          VUE_APP_SERVICE,
-          VUE_APP_TEMPLATE,
+          process.env.VUE_APP_SERVICE,
+          process.env.VUE_APP_TEMPLATE,
           {
             to_name: email.user_name,
             from_name: email.user_email,
             message: email.user_message,
             reply_to: "teste",
           },
-          VUE_APP_USER
+          process.env.VUE_APP_USER
         )
         .then(
            (result) => {
