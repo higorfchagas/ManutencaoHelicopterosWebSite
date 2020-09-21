@@ -88,17 +88,20 @@ export default {
     sendEmail: (email) => {
       var self = this;
       
+      console.log(process.env.DB_SERVICE,
+          process.env.DB_TEMPLATE, process.env.DB_USER,)
+      
       emailjs
         .send(
-          "service_u2nxifh",
-          "template_y0ajhoc",
+          process.env.VUE_APP_SERVICE,
+          process.env.VUE_APP_TEMPLATE,
           {
             to_name: email.user_name,
             from_name: email.user_email,
             message: email.user_message,
             reply_to: "teste",
           },
-          "user_jp70gJsbfmWiVFIEIlHkQ"
+          process.env.VUE_APP_USER,
         )
         .then(
           (result) => {
